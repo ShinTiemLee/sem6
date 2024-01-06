@@ -1,0 +1,6 @@
+
+ex4.out:5870 terminated with signal 11 at PC=565020c65460 SP=7ffdf53c7500.  Backtrace:
+./ex4.out(+0x1460)[0x565020c65460]
+/lib/x86_64-linux-gnu/libc.so.6(+0x29d90)[0x7f6c04829d90]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80)[0x7f6c04829e40]
+./ex4.out(+0x1125)[0x565020c65125]
