@@ -1,0 +1,10 @@
+
+ex1:4292 terminated with signal 11 at PC=7f986959d5fd SP=7fffc6fe6918.  Backtrace:
+/lib/x86_64-linux-gnu/libc.so.6(+0x19d5fd)[0x7f986959d5fd]
+/lib/x86_64-linux-gnu/libc.so.6(+0x76d31)[0x7f9869476d31]
+/lib/x86_64-linux-gnu/libc.so.6(+0x77665)[0x7f9869477665]
+/lib/x86_64-linux-gnu/libc.so.6(_IO_fprintf+0x9a)[0x7f98694606ca]
+./ex1(+0x14d6)[0x55f5456734d6]
+/lib/x86_64-linux-gnu/libc.so.6(+0x29d90)[0x7f9869429d90]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80)[0x7f9869429e40]
+./ex1(+0x1245)[0x55f545673245]
