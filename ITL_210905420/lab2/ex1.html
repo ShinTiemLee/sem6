@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>EX1</title>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" 
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+ <script 
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script 
+src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ <script 
+src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#update").click(function(){
+			
+			let gen="NOne";
+			let items=[];
+			$("input[type=radio]").each(
+                        function() {
+                            if ($(this).is(':checked'))
+                                gen=$(this).val();
+                        }
+                    );
+			$("input[type=checkbox]").each(
+                        function() {
+                            if ($(this).is(':checked'))
+                                items.push($(this).val());
+                        }
+                    );
+			let subs="";
+			subs += items.join(", ");
+			$('#tfname').text($('#fname').val());
+			$('#tlname').text($('#lname').val());
+			$('#tage').text($('#age').val());
+			$('#tgender').text(gen);
+			$("#tsubjects").text(subs);
+		});
+	});
+</script>
+
+</head>
+
+<body>
+	<div class="container">
+		<p>Student biodata</p>
+		<form>
+			<label for="fname">First Name:</label><br>
+			<input type="text" name="fname" id="fname"><br>
+			<label for="lname">Last Name:</label><br>
+			<input type="text" name="lname" id ="lname"><br>
+			<label for="regno">Reg No:   </label><br>
+			<input type="text" name="regno" id="regno"><br>
+			<label for="age">Age:   </label><br>
+			<input type="number" name="age" id="age"><br>
+			<p>Gender:</p>
+			<input type="radio" name="male" id="male" value="male">
+			<label for="male">Male</label>
+			<input type="radio" name="female" id="female" value="female" >
+			<label for="female">Female</label>
+			<input type="radio" name="others" id="others" value="others">
+			<label for="others">Others</label>
+			<p>Subjects:</p>
+			<input type="checkbox" name="DS" value="DS" >
+			<label for="DS">DS</label>
+			<input type="checkbox" name="PCAP" value="PCAP" >
+			<label for="PCAP">PCAP</label>
+			<input type="checkbox" name="EEFM" value="EEFM">
+			<label for="EEFM">EEFM</label>
+		</form>
+		<button type="submit" id="update" class="btn btn-outline-success">UPDATE</button>
+		<div class="container">
+			 <h2>Student Table</h2> 
+			 <table class="table table-dark table-striped">
+			 <thead>
+			 <tr>
+			 <th>Firstname</th>
+			 <th>Lastname</th>
+			 <th>Age</th>
+			 <th>Gender</th>
+			 <th>Subjects</th>
+			 </tr>
+			 </thead>
+			 <tbody>
+			 <tr id="data">
+			 <td id="tfname"></td>
+			 <td id="tlname"></td>
+			 <td id="tage"></td>
+			 <td id="tgender"></td>
+			 <td id="tsubjects"></td>
+			 </tr> 
+			 </tbody>
+			 </table>
+		</div>
+	</div>
+
+
+
+</body>
+</head>
+</html>
