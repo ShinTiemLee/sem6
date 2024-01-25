@@ -22,14 +22,14 @@ A=np.arange(12).reshape(3,4)
 B=np.arange(12).reshape(3,4)
 print(A)
 print("max of array is {}".format(A.max()))
-print("mim of array is {}".format(A.min()))
+print("min of array is {}".format(A.min()))
 print("sum of array is {}".format(A.sum()))
 max=0
 min=0
 for i in range(A.shape[0]):
 	print("max of row {} is {}".format(i,A[i,:].max()))
 	print("min of row {} is {}".format(i,A[i,:].min()))
-for i in range(A.shape[0]):
+for i in range(A.shape[1]):
 	print("max of col {} is {}".format(i,A[:,i].max()))
 	print("min of col {} is {}".format(i,A[:,i].min()))
 print(A.T)
