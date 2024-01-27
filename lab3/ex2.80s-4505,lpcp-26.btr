@@ -1,6 +1,0 @@
-
-ex2:4505 terminated with signal 11 at PC=56096ef61484 SP=7ffe8406ef80.  Backtrace:
-./ex2(+0x1484)[0x56096ef61484]
-/lib/x86_64-linux-gnu/libc.so.6(+0x29d90)[0x7f7359029d90]
-/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80)[0x7f7359029e40]
-./ex2(+0x11c5)[0x56096ef611c5]
