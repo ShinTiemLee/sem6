@@ -1,0 +1,14 @@
+import socket
+serverIP = 'localhost'
+serverPort = 16000
+clientSock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+clientSock.connect((serverIP, serverPort))
+message = input(str("Input integers with space in between: "))
+clientSock.send(message.encode())
+data = clientSock.recv(1024)
+temp = [float(x) for x in data.split(' ')]
+print("The total of all numbers is: " + str(temp[0]))
+print("The lowest number is: " + str(temp[1]))
+print("The highest number is: " + str(temp[2]))
+print("The mean is: " + str(temp[3]))
+clientSock.close()
