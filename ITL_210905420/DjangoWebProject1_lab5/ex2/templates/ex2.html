@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>EX2</title>
+
+</head>
+<body>
+    <script type="text/javascript">
+        function myfunc() {
+			var obj = document.getElementById("myid");
+			 var myid=obj.options[obj.selectedIndex].text;
+            var doj = document.getElementById("doj").value;
+            
+            const now = new Date();
+            const DOJ = new Date(doj);
+			
+            let Difference_In_Time = now.getTime() - DOJ.getTime();
+			
+            let Difference_In_Days = Math.round(Difference_In_Time / (1000 * 3600 * 24));
+       
+            if (Difference_In_Days > 365 * 5) {
+                document.getElementById("sum").innerHTML = myid + "is eligible?" + "YES";
+            }
+            else {
+                document.getElementById("sum").innerHTML = myid + "is eligible?" + "NO";
+            }
+        }
+    </script>
+
+    <div>
+        <h2>EMPLOYEE Details:</h2>
+        <form>
+            <p>Employee ID:</p>
+            <select id="myid">
+                <option>210905400</option>
+                <option>210905402</option>
+                <option>210905404</option>
+                <option>210905406</option>
+            </select>
+      <br />
+            <label for="doj">Date of Joining:</label><br>
+            <input type="text" name="doj" id="doj"><br>
+           
+            <input type="button" onclick="myfunc()" value="Am I Eligible For Promotion"><br>
+
+
+        </form>
+
+        <p id="sum"></p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>EX1</title>
+    
+</head >
+<body>
+    <script type="text/javascript">
+        function myfunc() {
+            var name = document.getElementById("name").value;
+            var dob = document.getElementById("dob").value;
+            var add = document.getElementById("add").value;
+            var email = document.getElementById("email").value;
+            var phy = document.getElementById("phy").value;
+            var eng = document.getElementById("eng").value;
+            var chm = document.getElementById("chm").value;
+            var res = (parseFloat(phy) + parseFloat(eng) + parseFloat(chm)) / 300 * 100;
+            document.getElementById("sum").innerHTML = "Name:" + name+ "<br>" + "DOB:" + dob + "<br>" + "Address:" + add + "<br>" + "Email:" + email + "<br>" + "PHY:" + phy + "<br>" + "ENG:" + eng + "<br>" + "CHM:" + chm + "<br>" + "Total:" + res + "<br>";
+
+        }
+    </script>
+
+    <div>
+        <h2>Student Details:</h2>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" name="name" id="name"><br>
+            <label for="dob">DOB:</label><br>
+            <input type="date" name="dob" id="dob"><br>
+            <label for="add">Address:</label><br>
+            <input type="text" name="add" id="add"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" name="email" id="email"><br>
+            <label for="phy">Physics marks:</label><br>
+            <input type="number" name="phy" id="phy"><br>
+            <label for="eng">English marks:</label><br>
+            <input type="number" name="eng" id="eng"><br>
+            <label for="chm">Chemistry marks:</label><br>
+            <input type="number" name="chm" id="chm"><br>
+            <input type="button" onclick="myfunc()" value="Submit"><br>
+
+
+        </form>
+       
+        <p id="sum"></p>
+    </div>
+
+</body>
+</html >
