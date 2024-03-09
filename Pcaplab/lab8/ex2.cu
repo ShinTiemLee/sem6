@@ -9,7 +9,7 @@
 __global__ void CUDACount(char* A,char* RS, int *d_countA){
 	int i=threadIdx.x;
 	int sum=0;
-	for(int x=0;x<=i;x++)
+	for(int x=0;x<i;x++)
 		sum+=(*d_countA-1-x);
 	for(int j=0;j<(*d_countA-i-1);j++){
 		RS[sum+j]=A[j];
